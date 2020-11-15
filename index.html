@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, height=device-height" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="robots" content="noydir, noodp">
+    <meta name="description" content="Shift Appens - Make It Appen">
+    <meta name="keywords"
+          content="shift, appens, hackathon, coding, talks, 48hours, coimbra, 2020, apps, design, 13, April, jeKnowledge, nei, dei, cmc">
+    <meta name="author" content="Joana Sousa">
+    <meta property="og:title" content="Shift Appens" />
+    <meta property="og:description"
+          content="Shift APPens is a hackathon, always striving for a relaxed environment, where it seeks to foster healthy competition through a knowledge exchange from the world of technology among participants.">
+    <meta property="og:url" content="https://shiftappens.pt" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://www.shiftappens.pt">
+    <!--<link rel="shortcut icon" type="image/png" href="css/images/favicon.ico" /> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/colors.css"> -->
+    <link rel="stylesheet" href="css/base.css">
+    <!--  <link rel="stylesheet" href="css/nav.css"> -->
+    <!-- link rel="stylesheet" href="css/footer.css"> -->
+    <!-- <link rel="stylesheet" href="css/social.css"> -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type = "text/javascript"
+            src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script>
+
+    <title>Shift Appens</title>
+</head>
+<body>
+<header>
+    <div class="logo-center">
+        <img src="css/images/logo.svg" alt="logo">
+    </div>
+</header>
+
+<main>
+<div class="anim">
+
+    <div class="section-centered">
+
+        <div id="title_toggle">
+            <h1>Make it APPen</h1>
+        </div>
+
+        <div class="text_welcome">
+            <p>Hi! Have you met Shift APPens? It’s a Hackathon, organized by NEI and jeKnowledge with love. Come join us at Coimbra, the well known city of students, bring your friends or your co-workers, and get ready for some fun, competition and companionship!</p>
+            <p>Don’t miss out on this opportunity, come be a part of Shift APPens’s History! A little tip: you can start by clicking the blue button below</p>
+        </div>
+
+    </div>
+</div>
+</main>
+
+
+
+
+<script>
+
+    $(document).ready(function(){
+
+        let timeId = setInterval(function() {
+            $("#title_toggle").effect("bounce", {times:3, distance: 30}, 400 );
+        }, 500);
+
+        $("#title_toggle").click(function () {
+            clearTimeout(timeId)
+        });
+
+
+
+
+
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>

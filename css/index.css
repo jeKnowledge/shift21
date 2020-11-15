@@ -1,0 +1,23 @@
+.anim {
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.section-centered{
+    color: white;
+}
+
+#title_toggle{
+    font-size: 3.5rem;
+}
+
+.text_welcome p {
+    font-size: 1rem;
+    width: 50%;
+    text-align: center;
+
+}
+
