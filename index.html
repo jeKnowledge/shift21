@@ -44,32 +44,58 @@
 
 
     <div class="section-centered">
+      <div id="text">
 
         <div id="title_toggle">
-            <h1>Make it APPen</h1>
 
-            <p>Hi! Have you met Shift APPens? It’s a Hackathon, organized by NEI and jeKnowledge with love. Come join us at Coimbra, the well known city of students, bring your friends or your co-workers, and get ready for some fun, competition and companionship!</p>
-            <p>Don’t miss out on this opportunity, come be a part of Shift APPens’s History! A little tip: you can start by clicking the blue button below</p>
+            <h1 id="titulo">Make it APPen</h1>
+
+            <p id="text_hi">
+              Hi! Have you met Shift APPens? It’s a Hackathon, organized by NEI and jeKnowledge with love. Come join us at Coimbra, the well known city of students, bring your friends or your co-workers, and get ready for some fun, competition and companionship!
+              <br> <br>Don’t miss out on this opportunity, come be a part of Shift APPens’s History! <br> A little tip: you can start by clicking the blue button below
+              <button id="botao" type="button">CLICK ME</button>
+            </p>
+        </div>
+
+        </div>
+
+        <div id="video">
+          <video width="900" height="492"  controls  >
+            <source src="css/images/shift2019.mp4" type="video/mp4">
+          </video>
         </div>
 
     </div>
 
 </main>
 
-
-
-
 <script>
 
     $(document).ready(function(){
 
-        let timeId = setInterval(function() {
-            $("#title_toggle").effect("bounce", {times:3, distance: 30}, 400 );
-        }, 500);
+         let timeId = setInterval(function() {
+             $("#title_toggle").effect("bounce", {times:3, distance: 30}, 400 );
+         }, 500);
+
 
         $("#title_toggle").click(function () {
             clearTimeout(timeId)
+            $("#title_toggle").animate({paddingTop: "0vh"});
+            $("#text_hi").animate({display: "block"});
+            $("#text_hi").animate({paddingTop: "2vh"});
+            $("#text_hi").animate({opacity: "1"});
+
         });
+
+         $("#botao").click(function () {
+           $("#text").animate({position: "relative"});
+
+           $("#text").animate({opacity: "0"});
+
+           $("#video").show(500).css("display", "block");
+
+
+           });
 
 
 
