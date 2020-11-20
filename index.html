@@ -34,6 +34,13 @@
     <title>Shift Appens</title>
 </head>
 <body>
+   <!-- <div id="vid_opening">
+  <video  autoplay muted  >
+    <source src="css/images/opening_dark.mov" type="video/mp4">
+  </video>
+  </div>  -->
+
+
 <header>
     <div class="logo-center">
         <img src="css/images/logo.svg" alt="logo">
@@ -60,8 +67,10 @@
         </div>
 
         <div id="video">
-          <video width="900" height="492"  controls  >
+          <video width="900" height="492"   muted  controls  >
             <source src="css/images/shift2019.mp4" type="video/mp4">
+            <source src="css/images/shift2019.webm" type="video/webm">
+            <source src="css/images/shift2019.ogg" type="video/ogg">
           </video>
         </div>
 
@@ -72,6 +81,11 @@
 <script>
 
     $(document).ready(function(){
+
+      //$('#vid_opening').show();
+      // $('#vid_opening').on('ended',function(){
+      //   $('#vid_opening').hide();
+      // });
 
          let timeId = setInterval(function() {
              $("#title_toggle").effect("bounce", {times:3, distance: 30}, 400 );
@@ -84,26 +98,14 @@
             $("#text_hi").animate({display: "block"});
             $("#text_hi").animate({paddingTop: "2vh"});
             $("#text_hi").animate({opacity: "1"});
-
         });
 
          $("#botao").click(function () {
            $("#text").animate({position: "relative"});
-
            $("#text").animate({opacity: "0"});
-
            $("#video").show(500).css("display", "block");
-
-
            });
-
-
-
-
-
     });
-
-
 
 
 

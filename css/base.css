@@ -1,15 +1,15 @@
+
+@font-face {
+  font-family: Poppins-bold;
+  src: url('../fonts/Poppins-Bold.ttf');
+}
+
 html {
     font-size: 16px;
     font-family: 'Hind', sans-serif;
     font-weight: 300;
-    scroll-behavior: smooth;
     background-image: url("images/background1.png");
 }
-
-/*main {
-    margin-top: calc(10vh + 3rem);
-    padding-top: 4rem;
-}*/
 
 a {
     text-decoration: none;
@@ -17,7 +17,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins-bold, sans-serif;
     font-weight: bold;
 }
 .logo-center {
