@@ -1,21 +1,43 @@
-#video_opening{
-  width: 100vw;
-  height: 100vh;
+
+#vid_opening_desktop{
+  position: absolute;
+  top:50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 10;
+  object-fit: cover;
+}
+
+#vid_opening_mobile{
+  position: absolute;
+  top:50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 10;
+  display: none;
+  background-color: #000000;
+}
+.logo-center img{
+  width: auto;
+  height: auto;
+  cursor: pointer;
 }
 
 .section-centered {
-    height: 85vh;
+    color: white;
+     height: 85vh;
     width: 100vw;
-    display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    display: flex;
 
 }
 
 #title_toggle{
     font-size: 3.5rem;
     padding-top: 30vh;
+    padding-bottom: 0;
+    cursor: pointer;
 }
 #title_toggle h1{
   text-align: center;
@@ -38,6 +60,7 @@
 #text_hi button{
   display: block;
   margin: 4vh auto ;
+  cursor: pointer;
 }
 
 .text_welcome p {
@@ -45,17 +68,74 @@
     width: 50%;
     text-align: center;
     display: none;
-
 }
-#text{
-
+#botao{
+  padding: 1vh 2vw ;
+  border-radius: 12px;
+  background-color: #4053FF;
+  color: white;
+  border: none;
+  font-family: Hind, sans-serif;
+  font-weight: 600;
 }
-#video{
+
+#video {
+
   position: absolute;
   display: none;
-
 }
-#video video{
-    z-index: 10;
+#video iframe{
+  width:850px;
+  height:auto;
+}
+@media screen and (max-width: 600px) {
+
+  #title_toggle h1{
+    font-size: 2rem;
+  }
+
+
+  #vid_opening_mobile{
+    display: block;
+  }
+  #vid_opening_desktop{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #vid_opening_mobile{
+    display: block;
+  }
+  #vid_opening_desktop{
+    display: none;
+  }
+  .section-centered{
+    height:95vh;
+  }
+
+  #title_toggle{
+  padding-top: 30vh;
+  }
+
+  #title_toggle h1{
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+
+  #text_hi{
+    font-family: Hind-light, sans-serif;
+    margin-bottom: 0;
+  }
+
+
+  #text_hi{
+  width: 70%;
+  }
+  #video video{
+    width:330px;
+    height:auto;
+  }
+
 
 }

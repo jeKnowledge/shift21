@@ -34,24 +34,29 @@
     <title>Shift Appens</title>
 </head>
 <body>
-   <!-- <div id="vid_opening">
-  <video  autoplay muted  >
-    <source src="css/images/opening_dark.mov" type="video/mp4">
-  </video>
-  </div>  -->
 
-
-<header>
-    <div class="logo-center">
-        <img src="css/images/logo.svg" alt="logo">
+    <div id="vid_opening_desktop">
+      <video class="logo_anim" autoplay muted  >
+        <source src="css/images/opening_desktop.mp4" type="video/mp4">
+      </video>
     </div>
-</header>
+
+    <div id="vid_opening_mobile">
+      <video class="logo_anim" autoplay muted  >
+        <source src="css/images/opening_mobile.mp4" type="video/mp4">
+      </video>
+    </div>
 
 <main>
+  <header>
+      <div onclick="window.location.href = 'index.html';" class="logo-center">
+          <img src="css/images/logo.svg" alt="logo">
+      </div>
+  </header>
 
 
     <div class="section-centered">
-      <div id="text">
+
 
         <div id="title_toggle">
 
@@ -62,34 +67,39 @@
               <br> <br>Don’t miss out on this opportunity, come be a part of Shift APPens’s History! <br> A little tip: you can start by clicking the blue button below
               <button id="botao" type="button">CLICK ME</button>
             </p>
-        </div>
+
 
         </div>
 
         <div id="video">
-          <video width="900" height="492"   muted  controls  >
+
+          <iframe width="900" height="492" src="https://www.youtube.com/embed/IscvLNon_X0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+          <!-- <video  autoplay muted  controls  >
             <source src="css/images/shift2019.mp4" type="video/mp4">
             <source src="css/images/shift2019.webm" type="video/webm">
             <source src="css/images/shift2019.ogg" type="video/ogg">
-          </video>
+          </video> -->
         </div>
 
     </div>
+
 
 </main>
 
 <script>
 
     $(document).ready(function(){
-
-      //$('#vid_opening').show();
-      // $('#vid_opening').on('ended',function(){
-      //   $('#vid_opening').hide();
-      // });
+      $('.logo_anim').show();
+       $('.logo_anim').on('ended',function(){
+         $('.logo_anim').hide();
+         $('#vid_opening_desktop').hide();
+         $('#vid_opening_mobile').hide();
+       });
 
          let timeId = setInterval(function() {
-             $("#title_toggle").effect("bounce", {times:3, distance: 30}, 400 );
-         }, 500);
+             $("#title_toggle").effect("bounce", {times:2, distance: 30}, 700 );
+         }, 1000);
 
 
         $("#title_toggle").click(function () {
@@ -101,9 +111,11 @@
         });
 
          $("#botao").click(function () {
-           $("#text").animate({position: "relative"});
-           $("#text").animate({opacity: "0"});
+           $('#title_toggle').hide();
+           //$("#text").animate({position: "relative"});
+           //$("#text").animate({opacity: "0"});
            $("#video").show(500).css("display", "block");
+
            });
     });
 
