@@ -80,13 +80,10 @@
 }
 
 #video {
-
   position: absolute;
   display: none;
 }
 #video iframe{
-  width:850px;
-  height:auto;
 }
 @media screen and (max-width: 600px) {
 
