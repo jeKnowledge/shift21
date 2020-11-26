@@ -1,138 +1,159 @@
-
-#vid_opening_desktop{
+#vid_opening_desktop {
   position: absolute;
-  top:50%;
+  top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 10;
   object-fit: cover;
 }
 
-#vid_opening_mobile{
+#vid_opening_mobile {
+  display: none;
   position: absolute;
-  top:50%;
+  top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 10;
-  display: none;
   background-color: #000000;
 }
-.logo-center img{
-  width: auto;
-  height: auto;
+
+/*.logo-center img { podes colocar o tamanho do logo diretamente na tag img*/
+header img {
+  width: 20%;
+  /* width: auto; esta linha e a debaixo não são precisas
+  height: auto; */
   cursor: pointer;
 }
 
-.section-centered {
-    color: white;
-     height: 85vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-
+main { /* antigo ".section-centered" */
+  height: 80vh; /* se o header tem um tamanho de 10vh, 80vh é a altura perfeita para o conteúdo ficar alinhado*/
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(202, 191, 191);
 }
 
-#title_toggle{
-    font-size: 3.5rem;
-    padding-top: 30vh;
-    padding-bottom: 0;
-    cursor: pointer;
-}
-#title_toggle h1{
+/* movi o conteúdo disto para o h1 de baixo #title_toggle { 
+  font-size: 3.5rem;
+  padding-top: 30vh;  <- não consegui perceber a necessidade dos dois paddings
+  padding-bottom: 0;
+  cursor: pointer;
+} */
+
+#title_toggle h1 {
   text-align: center;
+  font-size: 3.5rem;
+  cursor: pointer;
 }
-#title_toggle p{
-    margin:0 auto;
-    font-size: 1rem;
+
+#title_toggle p {
+  width: 40%;
+  margin: 2vh auto 4vh;
+  /* font-size: 1rem; o font-size já é 1rem não precisas de declarar again*/
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  /* padding-top: 2vh; este padding pode ir para o margin*/
 }
 
 #text_hi {
-  display: none
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* movi o conteúdo disto para o p de cima #text_hi {
+  display: none;
   font-weight: 400;
   line-height: 1.3;
   width: 40%;
   text-align: center;
   opacity: 0;
   padding-top: 0;
+} */
 
-}
-#text_hi button{
+/* movi o conteúdo disto para o button debaixo #text_hi {
+#text_hi button {
   display: block;
   margin: 4vh auto ;
   cursor: pointer;
-}
+}*/
 
-.text_welcome p {
-    font-size: 1rem;
-    width: 50%;
-    text-align: center;
-    display: none;
-}
-#botao{
+/* .text_welcome p { isto já não existe acho eu por isso podes apagar
+  font-size: 1rem;
+  width: 50%;
+  text-align: center;
+  display: none;
+} */
+
+button {
   padding: 1vh 2vw ;
+  border: none;
   border-radius: 12px;
   background-color: #4053FF;
   color: white;
-  border: none;
   font-family: Hind, sans-serif;
   font-weight: 600;
+  cursor: pointer;
 }
 
 #video {
   position: absolute;
   display: none;
 }
-#video iframe{
-}
-@media screen and (max-width: 600px) {
 
-  #title_toggle h1{
+/* #video iframe {  podes eliminar isto i think
+}*/
+
+@media screen and (max-width: 600px) {
+  #title_toggle h1 {
     font-size: 2rem;
   }
 
-
-  #vid_opening_mobile{
+  #vid_opening_mobile {
     display: block;
   }
-  #vid_opening_desktop{
+
+  #vid_opening_desktop {
     display: none;
   }
 }
 
 @media screen and (max-width: 400px) {
-  #vid_opening_mobile{
+  /*#vid_opening_mobile { isto pode desaparecer tendo em conta que está declarado no @media de cima
     display: block;
   }
-  #vid_opening_desktop{
+
+  #vid_opening_desktop {
     display: none;
-  }
-  .section-centered{
-    height:95vh;
-  }
+  }*/
 
-  #title_toggle{
-  padding-top: 30vh;
-  }
+  /*.section-centered { acho que isto pode continuar no mesmo tamanho
+    height: 95vh;
+  }*/
 
-  #title_toggle h1{
+  /*#title_toggle { isto pode desaparecer
+    padding-top: 30vh;
+  }*/
+
+  /*#title_toggle h1 { o font-size aumenta de 600px para 400px? parece engano.. e o cursor já foi declarado no topo da página
     font-size: 2.2rem;
-    cursor: pointer;
-  }
+     cursor: pointer; já foi declarado no topo da página
+  }*/
 
-  #text_hi{
+  /*#text_hi { isto pode desaparecer
     font-family: Hind-light, sans-serif;
     margin-bottom: 0;
+  }*/
+
+  #title_toggle p {
+    width: 70%;
   }
 
-
-  #text_hi{
-  width: 70%;
+  #video iframe { /* isto tem que ser um iframe*/
+    width: 330px;
+    height: auto;
   }
-  #video video{
-    width:330px;
-    height:auto;
-  }
-
-
 }

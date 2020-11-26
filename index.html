@@ -1,128 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, height=device-height" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="robots" content="noydir, noodp">
-    <meta name="description" content="Shift Appens - Make It Appen">
-    <meta name="keywords"
-          content="shift, appens, hackathon, coding, talks, 48hours, coimbra, 2020, apps, design, 13, April, jeKnowledge, nei, dei, cmc">
-    <meta name="author" content="Joana Sousa">
-    <meta property="og:title" content="Shift Appens" />
-    <meta property="og:description"
-          content="Shift APPens is a hackathon, always striving for a relaxed environment, where it seeks to foster healthy competition through a knowledge exchange from the world of technology among participants.">
-    <meta property="og:url" content="https://shiftappens.pt" />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href="https://www.shiftappens.pt">
-    <!--<link rel="shortcut icon" type="image/png" href="css/images/favicon.ico" /> -->
-    <link rel="stylesheet" href="css/reset.css">
-    <!-- <link rel="stylesheet" href="css/colors.css"> -->
-    <link rel="stylesheet" href="css/base.css">
-    <!--  <link rel="stylesheet" href="css/nav.css"> -->
-    <!-- link rel="stylesheet" href="css/footer.css"> -->
-    <!-- <link rel="stylesheet" href="css/social.css"> -->
-    <link rel="stylesheet" href="css/index.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script type = "text/javascript"
-            src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
-    </script>
-
-    <title>Shift Appens</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, height=device-height" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="robots" content="noydir, noodp">
+  <meta name="description" content="Shift Appens - Make It Appen">
+  <meta name="keywords"
+    content="shift, appens, hackathon, coding, talks, 48hours, coimbra, 2020, apps, design, 13, April, jeKnowledge, nei, dei, cmc">
+  <meta name="author" content="Joana Sousa">
+  <meta property="og:title" content="Shift Appens" />
+  <meta property="og:description"
+    content="Shift APPens is a hackathon, always striving for a relaxed environment, where it seeks to foster healthy competition through a knowledge exchange from the world of technology among participants.">
+  <meta property="og:url" content="https://shiftappens.pt" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.shiftappens.pt">
+  <!--<link rel="shortcut icon" type="image/png" href="css/images/favicon.ico" /> não te esqueças de colocar o favicon-->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- <link rel="stylesheet" href="css/colors.css"> -->
+  <link rel="stylesheet" href="css/base.css">
+  <!--  <link rel="stylesheet" href="css/nav.css"> -->
+  <!-- link rel="stylesheet" href="css/footer.css"> -->
+  <!-- <link rel="stylesheet" href="css/social.css"> -->
+  <link rel="stylesheet" href="css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <title>Shift Appens</title>
 </head>
+
 <body>
+  <div id="vid_opening_desktop">
+    <video class="logo_anim" autoplay muted>
+      <source src="css/images/opening_desktop.mp4" type="video/mp4">
+    </video>
+  </div>
 
-    <div id="vid_opening_desktop">
-      <video class="logo_anim" autoplay muted  >
-        <source src="css/images/opening_desktop.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div id="vid_opening_mobile">
-      <video class="logo_anim" autoplay muted  >
-        <source src="css/images/opening_mobile.mp4" type="video/mp4">
-      </video>
-    </div>
-
-<main>
-  <header>
-      <div onclick="window.location.href = 'index.html';" class="logo-center">
-          <img src="css/images/logo.svg" alt="logo">
-      </div>
+  <div id="vid_opening_mobile">
+    <video class="logo_anim" autoplay muted>
+      <source src="css/images/opening_mobile.mp4" type="video/mp4">
+    </video>
+  </div>
+  <header onclick="window.location.href = 'index.html';">
+    <!-- podes eliminar esta div e colocar a class e onclick diretamente no header <div> -->
+    <!-- podes eliminar também a class "logo center e colocar a info no header e -->
+    <img src="css/images/logo.svg" alt="logo">
+    <!--  </div> -->
   </header>
-
-
-    <div class="section-centered">
-
-
-        <div id="title_toggle">
-
-            <h1 id="titulo">Make it APPen</h1>
-
-            <p id="text_hi">
-              Hi! Have you met Shift APPens? It’s a Hackathon, organized by NEI and jeKnowledge with love. Come join us at Coimbra, the well known city of students, bring your friends or your co-workers, and get ready for some fun, competition and companionship!
-              <br> <br>Don’t miss out on this opportunity, come be a part of Shift APPens’s History! <br> A little tip: you can start by clicking the blue button below
-              <button id="botao" type="button">CLICK ME</button>
-            </p>
-
-
-        </div>
-
-        <div id="video">
-
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/XhYkM-xRMjA?controls=0"
-          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-          <!-- <video  autoplay muted  controls  >
+  <main>
+    <div id="title_toggle">
+      <h1 id="titulo">Make it APPen</h1> <!--não usas o id deste h1 em lado nenhum-->
+      <div id="text_hi">
+        <p>
+          Hi! Have you met Shift APPens? It’s a Hackathon, organized by NEI and jeKnowledge with love. Come join us at
+          Coimbra, the well known city of students, bring your friends or your co-workers, and get ready for some fun,
+          competition and companionship!</br></br>
+          Don’t miss out on this opportunity, come be a part of Shift APPens’s History!</br>
+          A little tip: you can start by clicking the blue button below
+        </p>
+        <button id="botao" type="button">CLICK ME</button> <!-- não podes ter um botão dentro de um parágrafo :/ e podes eliminar o id do botão que já não se está a usar-->
+      </div>
+    </div>
+    <div id="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XhYkM-xRMjA?controls=0" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      <!-- <video  autoplay muted  controls  >
             <source src="css/images/shift2019.mp4" type="video/mp4">
             <source src="css/images/shift2019.webm" type="video/webm">
             <source src="css/images/shift2019.ogg" type="video/ogg">
           </video> -->
-        </div>
-
     </div>
+  </main>
 
-
-</main>
-
-<script>
-
-    $(document).ready(function(){
+  <script>
+    $(document).ready(function () {
       $('.logo_anim').show();
-       $('.logo_anim').on('ended',function(){
-         $('.logo_anim').hide();
-         $('#vid_opening_desktop').hide();
-         $('#vid_opening_mobile').hide();
-       });
+      $('.logo_anim').on('ended', function () {
+        $('.logo_anim').hide();
+        $('#vid_opening_desktop').hide();
+        $('#vid_opening_mobile').hide();
+      });
 
-         let timeId = setInterval(function() {
-             $("#title_toggle").effect("bounce", {times:2, distance: 30}, 700 );
-         }, 1000);
+       let timeId = setInterval(function () {
+        $("#title_toggle").effect("bounce", {
+          times: 2,
+          distance: 30
+        }, 700);
+      }, 1000);
 
+      $("#title_toggle").click(function () { /* retirei o animate do padding que não faz grande diferença. opa sinto que lixei um bocado a animação por isso dá uma vista de olhos nisto*/
+        clearTimeout(timeId);
+        $("#text_hi").css("display","flex").hide().fadeIn(1500);
+      });
 
-        $("#title_toggle").click(function () {
-            clearTimeout(timeId)
-            $("#title_toggle").animate({paddingTop: "0vh"});
-            $("#text_hi").animate({display: "block"});
-            $("#text_hi").animate({paddingTop: "2vh"});
-            $("#text_hi").animate({opacity: "1"});
-        });
-
-         $("#botao").click(function () {
-           $('#title_toggle').hide();
-           //$("#text").animate({position: "relative"});
-           //$("#text").animate({opacity: "0"});
-           $("#video").show(500).css("display", "block");
-
-           });
+      $("#botao").click(function () {
+        $('#title_toggle').hide();
+        //$("#text").animate({position: "relative"});
+        //$("#text").animate({opacity: "0"});
+        $("#video").show(500).css("display", "block");
+      });
     });
-
-
-
-</script>
-
+  </script>
 </body>
 </html>
