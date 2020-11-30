@@ -18,13 +18,10 @@
   <meta property="og:url" content="https://shiftappens.pt" />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://www.shiftappens.pt">
-  <!--<link rel="shortcut icon" type="image/png" href="css/images/favicon.ico" /> não te esqueças de colocar o favicon-->
+  <link rel="shortcut icon" type="image/png" href="css/images/favicon.ico"/>
   <link rel="stylesheet" href="css/reset.css">
   <!-- <link rel="stylesheet" href="css/colors.css"> -->
   <link rel="stylesheet" href="css/base.css">
-  <!--  <link rel="stylesheet" href="css/nav.css"> -->
-  <!-- link rel="stylesheet" href="css/footer.css"> -->
-  <!-- <link rel="stylesheet" href="css/social.css"> -->
   <link rel="stylesheet" href="css/index.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
@@ -33,25 +30,24 @@
 
 <body>
   <div id="vid_opening_desktop">
-    <video class="logo_anim" autoplay muted>
-      <source src="css/images/opening_desktop.mp4" type="video/mp4">
+    <video class="logo_anim" autoplay muted >
+      <source src="css/images/finaal.mp4" type="video/mp4">
     </video>
   </div>
 
-  <div id="vid_opening_mobile">
+   <div id="vid_opening_mobile">
     <video class="logo_anim" autoplay muted>
       <source src="css/images/opening_mobile.mp4" type="video/mp4">
     </video>
   </div>
+
   <header onclick="window.location.href = 'index.html';">
-    <!-- podes eliminar esta div e colocar a class e onclick diretamente no header <div> -->
-    <!-- podes eliminar também a class "logo center e colocar a info no header e -->
     <img src="css/images/logo.svg" alt="logo">
-    <!--  </div> -->
   </header>
   <main>
+
     <div id="title_toggle">
-      <h1 id="titulo">Make it APPen</h1> <!--não usas o id deste h1 em lado nenhum-->
+      <h1 onclick="moveTitulo()">Make it APPen</h1>
       <div id="text_hi">
         <p>
           Hi! Have you met Shift APPens? It’s a Hackathon, organized by NEI and jeKnowledge with love. Come join us at
@@ -63,17 +59,13 @@
         <button id="botao" type="button">CLICK ME</button> <!-- não podes ter um botão dentro de um parágrafo :/ e podes eliminar o id do botão que já não se está a usar-->
       </div>
     </div>
+
     <div id="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/XhYkM-xRMjA?controls=0" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-      <!-- <video  autoplay muted  controls  >
-            <source src="css/images/shift2019.mp4" type="video/mp4">
-            <source src="css/images/shift2019.webm" type="video/webm">
-            <source src="css/images/shift2019.ogg" type="video/ogg">
-          </video> -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/zjNDCjELFGk?autoplay=0&showinfo=0&controls=0"
+      frameborder="0" allow="accelerometer; autoplay; muted;clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
     </div>
+
   </main>
 
   <script>
@@ -94,14 +86,17 @@
 
       $("#title_toggle").click(function () { /* retirei o animate do padding que não faz grande diferença. opa sinto que lixei um bocado a animação por isso dá uma vista de olhos nisto*/
         clearTimeout(timeId);
-        $("#text_hi").css("display","flex").hide().fadeIn(1500);
+         $("#text_hi").css("display","flex").hide().fadeIn(1500);
       });
+
+      function moveTitulo(){
+
+      }
 
       $("#botao").click(function () {
         $('#title_toggle').hide();
-        //$("#text").animate({position: "relative"});
-        //$("#text").animate({opacity: "0"});
         $("#video").show(500).css("display", "block");
+
       });
     });
   </script>
