@@ -36,7 +36,7 @@
   </div>
 
    <div id="vid_opening_mobile">
-    <video class="logo_anim" autoplay muted>
+    <video class="logo_anim" autoplay muted playsinline>
       <source src="css/images/opening_mobile.mp4" type="video/mp4">
     </video>
   </div>
@@ -47,7 +47,7 @@
   <main>
 
     <div id="title_toggle">
-      <h1 onclick="moveTitulo()">Make it APPen</h1>
+      <h1 id="title" onclick="moveTitulo()">Make it APPen</h1>
       <div id="text_hi">
         <p>
           Hi! Have you met Shift APPens? It’s a Hackathon, organized by NEI and jeKnowledge with love. Come join us at
@@ -61,9 +61,9 @@
     </div>
 
     <div id="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/zjNDCjELFGk?autoplay=0&showinfo=0&controls=0"
-      frameborder="0" allow="accelerometer; autoplay; muted;clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
+      <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/zjNDCjELFGk?autoplay=1&mute=1">
+      </iframe>
     </div>
 
   </main>
@@ -72,9 +72,14 @@
     $(document).ready(function () {
       $('.logo_anim').show();
       $('.logo_anim').on('ended', function () {
+
         $('.logo_anim').hide();
+      
+         $("#title_toggle h1").css({ opacity:1 });
         $('#vid_opening_desktop').hide();
         $('#vid_opening_mobile').hide();
+
+
       });
 
        let timeId = setInterval(function () {
@@ -84,7 +89,7 @@
         }, 700);
       }, 1000);
 
-      $("#title_toggle").click(function () { /* retirei o animate do padding que não faz grande diferença. opa sinto que lixei um bocado a animação por isso dá uma vista de olhos nisto*/
+      $("#title_toggle").click(function () {
         clearTimeout(timeId);
          $("#text_hi").css("display","flex").hide().fadeIn(1500);
       });
