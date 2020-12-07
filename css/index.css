@@ -86,10 +86,12 @@ button {
 
   #title_toggle h1 {
     font-size: 2rem;
+    opacity: 1;
   }
 
   #vid_opening_mobile {
     display: block;
+
   }
 
   #vid_opening_desktop {
